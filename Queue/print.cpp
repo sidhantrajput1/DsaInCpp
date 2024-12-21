@@ -17,12 +17,13 @@ void print(queue<int>& a) {
 
 void reverse(queue<int>& a) {
     stack<int> st;
+    // empty the Queue into Stack 
     while(a.size() > 0) {
         int x = a.front();
         a.pop();
         st.push(x);
     }
-
+    // empty the Stack into Queue 
     while(st.size() > 0) {
         int x = st.top();
         st.pop();

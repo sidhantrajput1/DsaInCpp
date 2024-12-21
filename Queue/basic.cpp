@@ -11,6 +11,10 @@ int main() {
     a.push(40);
     a.push(50);
     cout<<a.front()<<endl;
+    cout<<a.size()<<endl;
+    a.pop();
+    cout<<a.size()<<endl;
+    cout<<a.front()<<endl;
     cout<<a.back()<<endl;
 
     // push() -> insertion happen only at the back/rear -> o(1)
