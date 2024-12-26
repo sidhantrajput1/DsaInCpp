@@ -33,8 +33,10 @@ class Queue {
             cout<<"Queue is empty"<<endl;
             return;
         }
+        Node* temp = head;
         head = head->next;
         size--;
+        delete(temp); // wastege nahi hoga after the delete the node
       }
       int front() {
         if(size == 0) {
@@ -44,13 +46,13 @@ class Queue {
         return head->val;
       }
 
-       int back() {
+      int back() {
         if(size == 0) {
             cout<<"Queue id  Empty";
             return -1;
         }
         return tail->val;
-       }
+      }
 
       void display() {
         Node* temp = head;
@@ -59,6 +61,13 @@ class Queue {
             temp = temp->next;
         }
         cout<<endl;
+      }
+      int size1() {
+        return size;
+      }
+      bool empty() {
+        if(size == 0) return true;
+        else return false;
       }
 };
 
@@ -69,5 +78,23 @@ int main () {
     q.push(3);
     q.push(4);
     q.push(5);
+    q.push(7);
+    q.push(10);
     q.display();
+    cout<<q.back()<<endl;
+    q.display();
+    cout<<q.front()<<endl;
+    q.pop();
+    q.display();
+    cout<<q.size1()<<endl;
 };
+
+
+// Advantage of Linked list implemetation of Queue over array implementation
+// 1. Unlimited size
+// 2. Natural , it's like linked list implemetation
+// 3. wastage of size is not there
+
+
+// Disadvantage of linkedlist implemetation of Queue over array implementation
+//  1. For each element we have a Node -> val, next
