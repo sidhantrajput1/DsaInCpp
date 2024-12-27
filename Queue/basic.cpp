@@ -20,7 +20,7 @@ int main() {
     // push() -> insertion happen only at the back/rear -> o(1)
     // pop() -> only happen at the front
     // front() -> we can access the front of the queue
-    // back() -> we can access the rear element
+    // back() -> we can access the rear element..
 
     // overflow -> only happens if we implement the queue via an array if you fill the array
     // underflow -> whenever the queue is empty & try to use these function like front() , back() , pop()
