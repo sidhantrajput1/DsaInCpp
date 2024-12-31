@@ -20,6 +20,20 @@ void displayTree(Node* root) {
     displayTree(root->right);
 }
 
+int sum(Node* root) {
+    if(root==NULL) return 0;
+    // int leftSum = sum(root->left);
+    // int rightSum =  sum(root->right);
+    // int ansSum = root->val + leftSum + rightSum;
+    // int ansSum = root->val + sum(root->left) + sum(root->right);
+    return root->val + sum(root->left) + sum(root->right);
+};
+
+int size(Node* root) {
+    if(root==NULL) return 0;
+    return 1 + size(root->left) + size(root->right);
+}
+
 int main() {
     Node* a = new Node(1); // root node
     Node* b = new Node(2);
@@ -35,4 +49,9 @@ int main() {
     c->left = f;
     c->right = g;
     displayTree(a);
+    cout<<endl;
+    int ans = sum(a);
+    cout<<ans<<endl;
+    int ans1 = size(a);
+    cout<<ans1;
 }
