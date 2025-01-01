@@ -35,26 +35,28 @@ int size(Node* root) {
 }
 
 int maxNode(Node* root) {
-    if(root == NULL) return 0;
+    if(root == NULL) return INT8_MIN;
     int lMax = maxNode(root->left);
     int rMax = maxNode(root->right);
     return max(root->val , max(lMax, rMax));
 }
 
 int main() {
-    Node* a = new Node(1); // root node
-    Node* b = new Node(2);
-    Node* c = new Node(3);
-    Node* d = new Node(8);
-    Node* e = new Node(5);
-    Node* f = new Node(6);
-    Node* g = new Node(7);
+    Node* a = new Node(-1); // root node
+    Node* b = new Node(-2);
+    Node* c = new Node(-3);
+    Node* d = new Node(-8);
+    Node* e = new Node(-5);
+    Node* f = new Node(-6);
+    Node* g = new Node(-7);
+    
     a->left = b;
     a->right = c;
     b->left = d;
     b->right = e;
     c->left = f;
     c->right = g;
+
     displayTree(a);
     cout<<endl;
     int ans = sum(a);
