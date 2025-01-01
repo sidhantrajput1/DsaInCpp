@@ -29,6 +29,11 @@ int sum(Node* root) {
     return root->val + sum(root->left) + sum(root->right);
 };
 
+int product(Node* root) {
+    if(root == NULL) return 1;
+    return ((root->val) * (product(root->left)) * (product(root->right)));
+}
+
 int size(Node* root) {
     if(root==NULL) return 0;
     return 1 + size(root->left) + size(root->right);
@@ -41,14 +46,21 @@ int maxNode(Node* root) {
     return max(root->val , max(lMax, rMax));
 }
 
+int minNode(Node* root) {
+    if(root == NULL) return INT8_MAX;
+    int lMin = minNode(root->left);
+    int rMin = minNode(root->right);
+    return min(root->val, min(lMin, rMin));
+}
+
 int main() {
-    Node* a = new Node(-1); // root node
-    Node* b = new Node(-2);
-    Node* c = new Node(-3);
-    Node* d = new Node(-8);
-    Node* e = new Node(-5);
-    Node* f = new Node(-6);
-    Node* g = new Node(-7);
+    Node* a = new Node(1); // root node
+    Node* b = new Node(2);
+    Node* c = new Node(3);
+    Node* d = new Node(8);
+    Node* e = new Node(5);
+    Node* f = new Node(6);
+    Node* g = new Node(7);
     
     a->left = b;
     a->right = c;
@@ -64,4 +76,6 @@ int main() {
     int ans1 = size(a);
     cout<<ans1<<endl;
     cout<<maxNode(a)<<endl;
+    cout<<product(a)<<endl;
+    cout<<minNode(a)<<endl;
 }
