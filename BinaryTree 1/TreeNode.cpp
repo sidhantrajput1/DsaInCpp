@@ -34,11 +34,18 @@ int size(Node* root) {
     return 1 + size(root->left) + size(root->right);
 }
 
+int maxNode(Node* root) {
+    if(root == NULL) return 0;
+    int lMax = maxNode(root->left);
+    int rMax = maxNode(root->right);
+    return max(root->val , max(lMax, rMax));
+}
+
 int main() {
     Node* a = new Node(1); // root node
     Node* b = new Node(2);
     Node* c = new Node(3);
-    Node* d = new Node(4);
+    Node* d = new Node(8);
     Node* e = new Node(5);
     Node* f = new Node(6);
     Node* g = new Node(7);
@@ -53,5 +60,6 @@ int main() {
     int ans = sum(a);
     cout<<ans<<endl;
     int ans1 = size(a);
-    cout<<ans1;
+    cout<<ans1<<endl;
+    cout<<maxNode(a)<<endl;
 }
