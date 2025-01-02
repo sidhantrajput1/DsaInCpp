@@ -53,6 +53,13 @@ int minNode(Node* root) {
     return min(root->val, min(lMin, rMin));
 }
 
+int level(Node* root) {
+    if(root == NULL) return 0;
+    int levelL = level(root->left);
+    int levelR = level(root->right); 
+    return 1 + max(levelL, levelR);
+}
+
 int main() {
     Node* a = new Node(1); // root node
     Node* b = new Node(2);
@@ -71,11 +78,18 @@ int main() {
 
     displayTree(a);
     cout<<endl;
-    int ans = sum(a);
-    cout<<ans<<endl;
-    int ans1 = size(a);
-    cout<<ans1<<endl;
-    cout<<maxNode(a)<<endl;
-    cout<<product(a)<<endl;
-    cout<<minNode(a)<<endl;
+    // int ans = sum(a);
+    // cout<<ans<<endl;
+    // int ans1 = size(a);
+    // cout<<ans1<<endl;
+    // cout<<maxNode(a)<<endl;
+    // cout<<product(a)<<endl;
+    // cout<<minNode(a)<<endl;
+    cout<<level(a)<<endl;
 }
+
+// full binary tree // o or 2 child
+// Perfect tree , last level have tree is no leaf node
+// complete binary tree
+// balanced binary tree
+// 1. 
