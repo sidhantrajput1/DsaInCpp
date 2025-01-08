@@ -36,7 +36,7 @@ int product(Node* root) {
 
 int size(Node* root) {
     if(root==NULL) return 0;
-    return 1 + size(root->left) + size(root->right);
+    return 1 + size(root->left) + size(root->right); 
 }
 
 int maxNode(Node* root) {
