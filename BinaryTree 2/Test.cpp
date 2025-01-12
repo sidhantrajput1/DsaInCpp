@@ -13,27 +13,30 @@ public :
 };
 
 // preorder traversal
+// root -> left -> right 
 void preorder(TreeNode* root) {
     if(root == NULL) return;
-    cout<<root->val<<" ";
+    cout<<root->val<<" "; // root
     preorder(root->left);
     preorder(root->right);
 }
 
 // inorder traversal
+// left -> root -> right
 void inorder(TreeNode* root) {
     if(root == NULL) return;
-    inorder(root->left);
-    cout<<root->val<<" ";
-    inorder(root->right);
+    inorder(root->left); // left
+    cout<<root->val<<" "; // root
+    inorder(root->right); // right
 }
 
 // postorder traversal
+// left -> right -> root
 void postorder(TreeNode* root) {
     if(root == NULL) return;
-    postorder(root->left);
-    postorder(root->right);
-    cout<<root->val<<" ";
+    postorder(root->left); // left
+    postorder(root->right); // right
+    cout<<root->val<<" "; // root
 }
 
 int main() {
