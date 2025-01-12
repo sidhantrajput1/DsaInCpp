@@ -13,26 +13,26 @@ public :
 };
 
 // preorder traversal
-// void displayTree(TreeNode* root) {
-//     if(root == NULL) return;
-//     cout<<root->val<<" ";
-//     displayTree(root->left);
-//     displayTree(root->right);
-// }
+void preorder(TreeNode* root) {
+    if(root == NULL) return;
+    cout<<root->val<<" ";
+    preorder(root->left);
+    preorder(root->right);
+}
 
 // inorder traversal
-// void displayTree(TreeNode* root) {
-//     if(root == NULL) return;
-//     displayTree(root->left);
-//     cout<<root->val<<" ";
-//     displayTree(root->right);
-// }
+void inorder(TreeNode* root) {
+    if(root == NULL) return;
+    inorder(root->left);
+    cout<<root->val<<" ";
+    inorder(root->right);
+}
 
 // postorder traversal
-void displayTree(TreeNode* root) {
+void postorder(TreeNode* root) {
     if(root == NULL) return;
-    displayTree(root->left);
-    displayTree(root->right);
+    postorder(root->left);
+    postorder(root->right);
     cout<<root->val<<" ";
 }
 
@@ -52,5 +52,12 @@ int main() {
     c->left = f;
     c->right = g;
 
-    displayTree(a);
+    preorder(a);
+    cout<<endl;
+
+    inorder(a);
+    cout<<endl;
+
+    postorder(a);
+    cout<<endl;
 }
