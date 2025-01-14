@@ -66,25 +66,35 @@ void leveltraversalReverse(TreeNode* root) {
 }
 
 int main() {
-    TreeNode* a = new TreeNode(1);
-    TreeNode* b = new TreeNode(2);
-    TreeNode* c = new TreeNode(3);
-    TreeNode* d = new TreeNode(4);
-    TreeNode* e = new TreeNode(5);
-    TreeNode* f = new TreeNode(6);
-    TreeNode* g = new TreeNode(7);
+    // TreeNode* a = new TreeNode(1);
+    // TreeNode* b = new TreeNode(2);
+    // TreeNode* c = new TreeNode(3);
+    // TreeNode* d = new TreeNode(4);
+    // TreeNode* e = new TreeNode(5);
+    // TreeNode* f = new TreeNode(6);
+    // TreeNode* g = new TreeNode(7);
+
+    TreeNode* a = new TreeNode(3);
+    TreeNode* b = new TreeNode(9);
+    TreeNode* c = new TreeNode(20);
+    TreeNode* d = new TreeNode(15);
+    TreeNode* e = new TreeNode(7);
 
     a->left = b;
     a->right = c;
-    b->left = d;
-    b->right = e;
-    c->left = f;
-    c->right = g;
+    c->left = d;
+    c->right = e;
+    // a->left = b;
+    // a->right = c;
+    // b->left = d;
+    // b->right = e;
+    // c->left = f;
+    // c->right = g;
 
     preorder(a);
     cout<<endl;
-    printNthLevelOfElement(a, 1, 3);
-    cout<<endl;
+    // printNthLevelOfElement(a, 1, 3);
+    // cout<<endl;
 
     // level traversal
     leveltraversal(a);
