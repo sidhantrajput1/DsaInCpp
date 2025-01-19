@@ -21,16 +21,7 @@ void preorder(TreeNode* root) {
     preorder(root->right);
 }
 
-// print element of nth level
-void printNthLevelOfElement(TreeNode* root, int curr, int level) {
-    if(root==NULL) return;
-    if(curr == level) {
-        cout<<root->val<<" ";
-        return;
-    }
-    printNthLevelOfElement(root->left, curr+1, level);
-    printNthLevelOfElement(root->right, curr+1, level);
-}
+
 
 void printNthLevelOfElementInReverse(TreeNode* root, int curr, int level) {
     if(root==NULL) return;
@@ -42,6 +33,16 @@ void printNthLevelOfElementInReverse(TreeNode* root, int curr, int level) {
     printNthLevelOfElementInReverse(root->left, curr+1, level); // left
 }
 
+// print element of nth level
+void printNthLevelOfElement(TreeNode* root, int curr, int level) {
+    if(root==NULL) return;
+    if(curr == level) {
+        cout<<root->val<<" ";
+        return;
+    }
+    printNthLevelOfElement(root->left, curr+1, level);
+    printNthLevelOfElement(root->right, curr+1, level);
+}
 
 // find the level fo tree
 int levels(TreeNode* root) {
@@ -102,8 +103,8 @@ int main() {
     // cout<<endl;
 
     // level traversal
-    // leveltraversal(a);
-    // cout<<endl;
+    leveltraversal(a);
+    cout<<endl;
     // leveltraversalReverse(a); 
-    levelOrderQueue(a);
+    // levelOrderQueue(a);
 }
