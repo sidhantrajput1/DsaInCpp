@@ -22,7 +22,6 @@ void preorder(TreeNode* root) {
 }
 
 
-
 void printNthLevelOfElementInReverse(TreeNode* root, int curr, int level) {
     if(root==NULL) return;
     if(curr == level) {
@@ -67,7 +66,7 @@ void leveltraversalReverse(TreeNode* root) {
     }
 }
 
-// level order tree traversal suing queue 
+// level order tree traversal using queue 
 void levelOrderQueue(TreeNode* root) {
     queue<TreeNode*> q;
     q.push(root);
@@ -75,8 +74,8 @@ void levelOrderQueue(TreeNode* root) {
         TreeNode* temp = q.front();
         q.pop();
         cout<<temp->val<<" ";
-        if(root->left != NULL) q.push(temp->left);
-        if(root->right != NULL) q.push(temp->right);
+        if(temp->left != NULL) q.push(temp->left);
+        if(temp->right != NULL) q.push(temp->right);
     }
     cout<<endl;
 }
@@ -99,12 +98,12 @@ int main() {
 
     // preorder(a);
     // cout<<endl;
-    // printNthLevelOfElement(a, 1, 3);
-    // cout<<endl;
+    printNthLevelOfElement(a, 1, 3);
+    cout<<endl;
 
     // level traversal
     leveltraversal(a);
     cout<<endl;
     // leveltraversalReverse(a); 
-    // levelOrderQueue(a);
+    levelOrderQueue(a);
 }
