@@ -86,6 +86,8 @@ int main() {
     // cout<<product(a)<<endl;
     // cout<<minNode(a)<<endl;
     cout<<level(a)<<endl;
+    cout<<product(a)<<endl;
+    cout<<size(a)<<endl;
 }
 
 // full binary tree // o or 2 child
