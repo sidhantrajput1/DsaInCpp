@@ -17,7 +17,6 @@ Find the difference between the sum of elements at even indices to the sum of el
 indices.
 Given an array of integers, change the value of all odd indexed elements to its second multiple and increment all even indexed values by 10.
 
-Find the unique number in a given Array where all the elements are being repeated twice with one
+Find the unique number in a given Array where all the elements are being repeated twice with one value being unique.
 
-value being unique.
 If an array arr contains n elements, then check if the given array is a palindrome or not .

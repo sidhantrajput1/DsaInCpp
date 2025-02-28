@@ -18,6 +18,7 @@ void inorder(TreeNode* root) {
     cout << root->val << " "; // root
     inorder(root->right); // right
 }
+
 // step1 :-> go left once
 // step2 : keep going right if possible
 int inOrderPredcessor(TreeNode* root) {

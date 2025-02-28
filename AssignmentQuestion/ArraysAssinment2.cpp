@@ -78,6 +78,8 @@ void changeValue(vector<int>& v) {
     }
 }
 
+// 
+
 // display the array
 void display(vector<int>& v) {
     for(int i = 0; i < v.size(); i++) {
@@ -97,11 +99,18 @@ int findTheUnque(vector<int>& v) {
     return unique;
 }
 
-// 
+// If an array arr contains n elements, then check if the given array is a palindrome or not .
+bool checkPailndrome(vector<int>& v) {
+    int n = v.size();
+    for(int i = 0; i < n / 2; i++) {
+        if(v[i] != v[n-i-1]) return false;
+    }
+    return true;;
+}
 
 int main() {
     // vector<int> v = {20, 33, 18, 42, 55, 12, 25};
-    vector<int> v = {4, 2, 4, 6, 2};
+    vector<int> v = {3, 6, 7, 9, 6, 3};
     // cout<<strictlygreaterElement(v, 30)<<endl;
     // vector<int> largest = threeLargest(v);
 
@@ -117,6 +126,7 @@ int main() {
     // changeValue(v);
     display(v);
     cout<<findTheUnque(v)<<endl;
+    cout<<checkPailndrome(v)<<endl;
 
     return 0;
 }
