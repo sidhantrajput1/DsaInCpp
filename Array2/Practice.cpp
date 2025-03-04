@@ -82,6 +82,26 @@ void move(vector<int>& v) {
     }
     return;
 }
+
+void partitionArrayAccorToPivot(vector<int>& v, int pivot) {
+    int n = v.size();
+    vector<int> result(n);
+
+    int idx = 0;
+    for(int i = 0; i < n; i++) {
+        if(v[i] < pivot) {
+            result[idx++] = v[i];
+        }
+    }
+
+    for(int i = 0; i < n; i++) {
+        if(v[i] >= pivot) {
+            result[idx++] = v[i];
+        }
+    }
+
+    v = result;
+}
  
 
 
@@ -94,7 +114,9 @@ void rotateKStepArray(vector<int>& v, int k) {
 }
 
 int main() {
-    vector<int>  v = {12, -7, -5, 3, -1, 4, -2, 8};
-    move(v);
+    vector<int>  v = {4, 8 , 11, 22 , 10 , 12, 10, 44};
+    int pivot = 10;
+
+    partitionArrayAccorToPivot(v, pivot);
     display(v);
 }
