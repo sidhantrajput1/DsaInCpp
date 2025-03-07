@@ -38,3 +38,16 @@ If an array arr contains n elements, then check if the given array is a palindro
     8 10 9
 
 2. Q1: Write a program to store 10 at every index of a 2D matrix with 5 rows and 5 columns
+
+3. Q3: Given a matrix ‘A’ of dimension n x m and 2 coordinates (l1, r1) and (l2, r2). Return the sum of the
+    rectangle from (l1,r1) to (l2, r2).
+    Input 1:
+    1 2 -3 4
+    0 0 -4 2
+    1 -1 2 3
+    -4 -5 -7 0
+    l1 = 1, r1 = 2 , l2 = 3 , r2 = 3
+    Output 1: -4
+    
+
+5. Q4: Write a C++ program to find the largest element of a given 2D array of integers.
