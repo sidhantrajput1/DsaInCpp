@@ -60,5 +60,5 @@ int main() {
     }
 
     cout<<maxSum<<endl;
-    cout<<maxIdx<<endl;
+    // cout<<maxIdx<<endl;
 }
