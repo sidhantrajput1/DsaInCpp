@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-vector<int> prefSum(vector<int>& v, int left, int right) {
+vector<int> ra(vector<int>& v, int left, int right) {
     for(int i = left; i < right; i++) {
         v[i] = v[i] + v[i-1];
     }
