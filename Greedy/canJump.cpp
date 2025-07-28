@@ -28,6 +28,7 @@ int canJumpII(vector<int>& nums) {
     return jumps;
 }
 
+
 int main() {
     vector<int> nums = {2,3,1,1,4,5};
     cout<<canJump(nums);

@@ -1,0 +1,1 @@
+Vector , value (integer, string , float , double), pass by value hote hai 
