@@ -52,7 +52,7 @@ int main() {
         prevSum = prevSum + arr[j] - arr[i-1];
         if(maxSum < prevSum) {
             maxSum = prevSum;
-            maxIdx = i;
+            // maxIdx = i;
         }
         // prevSum = currSum;
         i++;

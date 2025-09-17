@@ -45,6 +45,7 @@ vector<int> bfsTraversal(int start, int vertices, vector<list<int>>& adjList)
                 q.push(neighbour);
             }
         }
+        
     }
     
     return ans;
