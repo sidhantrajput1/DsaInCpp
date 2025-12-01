@@ -7,7 +7,7 @@ int main() {
     int x = 12345;
     // cout<<x<<endl;
     string y = to_string(x);
-    // cout<<y<<endl;
+    cout<<y<<endl;
 
     return 0;
 }

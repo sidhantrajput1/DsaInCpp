@@ -22,11 +22,11 @@ int main() {
     // cout<<str;
 
     // + Operator
-    // string s = "abc";
-    // cout<<s<<endl;
-    // string t = "def";
-    // s = s + t + "xyz";
-    // cout<<s<<endl;
+    string s = "abc";
+    cout<<s<<endl;
+    string t = "def";
+    s = s + t + "xyz";
+    cout<<s<<endl;
 
     // Reverse built in function
     // string str = "sidhant";
@@ -35,10 +35,10 @@ int main() {
     // cout<<str<<endl;
 
     // Reverse the first half of the string
-    string str = "sidhantt";
-    cout<<str<<endl;
-    reverse(str.begin()+ 0, str.begin() + 4);
-    cout<<str<<endl;
+    // string str = "sidhantt";
+    // cout<<str<<endl;
+    // reverse(str.begin()+ 0, str.begin() + 4);
+    // cout<<str<<endl;
 
     return 0;
 }
